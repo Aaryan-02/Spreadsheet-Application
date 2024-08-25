@@ -51,7 +51,7 @@ export default function Toolbar() {
     };
 
     return (
-        <div className="p-4 bg-indigo-200 dark:bg-gray-800 shadow-md rounded-lg">
+        <div className="p-2 md:p-4 bg-indigo-200 dark:bg-gray-800 shadow-md rounded-lg">
             <div className="flex flex-col md:flex-row gap-2 md:gap-4 items-center justify-center md:justify-between">
                 <div className="flex flex-col md:flex-row gap-2 md:gap-4 items-center md:items-start">
                     <div className="relative">
