@@ -39,7 +39,7 @@ export default function Pagination() {
         : 'border-cyan-500 text-indigo-500';
 
     return (
-        <div className='flex justify-center mt-8'>
+        <div className='flex justify-center mt-8 mb-2.5'>
             <div className="inline-flex rounded-xl">
                 <ul className="flex items-center">
                     <li className="md:px-2 px-1">
