@@ -28,7 +28,7 @@ export default function Cell({ cellId }) {
     return (
         <input
             type="text"
-            className={`border p-2 text-sm w-full h-full focus:outline-none focus:border-indigo-700 
+            className={`border p-3 text-sm w-full h-full focus:outline-none focus:border-indigo-700 
         ${isHighlighted ? 'bg-indigo-200 font-semibold' : theme === 'light' ? 'bg-white' : 'bg-gray-700 text-white'} 
         hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors duration-200`
             }
