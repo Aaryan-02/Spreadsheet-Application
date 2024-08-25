@@ -1,4 +1,5 @@
 import Cell from './Cell';
+import styles from './Grid.module.css';
 import { useSpreadsheetStore } from '../store/useSpreadsheetStore';
 
 export default function Grid() {
@@ -15,16 +16,12 @@ export default function Grid() {
     const cellsToDisplay = Object.keys(cells).slice(startIndex, endIndex);
 
     return (
-        <div className={`grid gap-0 border ${theme === 'light' ? 'bg-white' : 'bg-gray-800'}`}
-            style={{
-                height: '100%',
-                width: '100%',
-                gridTemplateColumns: 'repeat(auto-fill, minmax(150px, 1fr))',
-                gridAutoRows: 'minmax(44px, auto)'
-            }}>
-            {cellsToDisplay.map((index) => (
-                <Cell key={index} cellId={index} />
-            ))}
+        <div className={`flex-1 overflow-auto p-4 pb-0 ${styles.container}`}>
+            <div className={`grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 gap-0 border ${theme === 'light' ? 'bg-white' : 'bg-gray-800'}`}>
+                {cellsToDisplay.map((index) => (
+                    <Cell key={index} cellId={index} />
+                ))}
+            </div>
         </div>
     );
 }
